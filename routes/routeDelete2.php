@@ -8,7 +8,7 @@
     </div>
     <?php
     require "routes.php";
-    $routeID = $_POST["movIdField"];
+    $routeID = $_POST["routeIDField"];
     $route1 = new route();
     $route1->searchRoute($routeID);
     ?>
