@@ -1,8 +1,8 @@
 <?php
 
-require_once "connect.php";
+require_once "../connect.php";
 
-class Routes
+class route
 {
 
     // properties -- eigenschappen ----
@@ -178,8 +178,8 @@ values (:routeID,:beginPoint, :endPoint, :location, :routeName)");
         // route maken
         $sql = $conn->prepare("
 									update route
-									set beginPoint=:beginPoinr, endPoint=:endPoint, location=:location, 
-									    routeName=:movLength   
+									set beginPoint=:beginPoint, endPoint=:endPoint, location=:location, 
+									    routeName=:routeName   
 									where routeID=:routeID
 								 ");
         // variabelen in de statement zetten

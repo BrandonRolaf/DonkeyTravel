@@ -13,7 +13,7 @@
     <?php
 
     require "routes.php";                    // neccessary to make an object
-    $routeID = $_POST[""];
+    $routeID = $_POST["routeIDField"];
     $route1 = new route();                // making the object
     $route1->searchRoute($routeID);
 
