@@ -1,15 +1,20 @@
 <?php
 
+// maakt verbinding met database 'donkey travel'
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $servername = "localhost";
-$dbname = "donkeytravel";
+$dbname = "donkey_travel";
 $username = "root";
 $password = "";
 
 try {
-    $conn = new PDO("mysql: host=$servername;dbname=$dbname", $username,$password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-}
+    $conn = new PDO("mysql:host=$servername; 
+        dbname=$dbname", $username, $password);
 
-catch(PDOException $e)  {
-    echo "Connection failed: " . $e->getMessage();
+    //echo "Connectie gelukt! </br>";
+} catch (PDOException $e) {
+    echo "Connection failed:" . $e->getMessage();
 }
