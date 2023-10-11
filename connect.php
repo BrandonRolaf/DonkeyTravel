@@ -1,11 +1,7 @@
 <?php
-// maakt verbinding met database 'donkey travel'
-//
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
 // maakt verbinding met database 'donkey travel'
+//
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -23,4 +19,3 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed:" . $e->getMessage();
 }
-
