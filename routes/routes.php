@@ -111,24 +111,22 @@ values (:routeID,:beginPoint, :endPoint, :location, :routeName)");
     }
 
     public function readRoute()
-    {
-        global $conn;
-        // statement
-        $sql = $conn->prepare(" SELECT * FROM route");
-        $sql->execute();
-        foreach ($sql as $route) {
-            echo $route["routeID"] . " - ";                         // geen eigenscap van object student
-            $this->set_beginPoint($route["beginPoint"]);
-            echo $route["beginPoint"] . " - ";
-            $this->set_endPoint($route["endPoint"]);
-            echo $route["endPoint"] . " - ";
-            $this->set_location($route["location"]);
-            echo $route["location"] . " - ";
-            $this->set_routeName($route["routeName"]);
-            echo $route["routeName"] . " - ";
-
-        }
+{
+    global $conn;
+    // statement
+    $sql = $conn->prepare("SELECT * FROM route");
+    $sql->execute();
+    
+    foreach ($sql as $route) {
+        echo $route["routeID"] . " - ";
+        echo $route["beginPoint"] . " - ";
+        echo $route["endPoint"] . " - ";
+        echo $route["location"] . " - ";
+        echo $route["routeName"] . " - ";
+        echo "<a href='../gps/map.html?id=" . $route['routeID'] . "'>Link naar kaart</a>";
+        echo "<br>";
     }
+}
 
     public function searchRoute($routeID)
     {
