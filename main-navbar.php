@@ -29,7 +29,7 @@
                 <a href="../customers/readCustomer.php">Read customer</a>
                 <a href="../customers/updateCustomer.php">Update customer</a>
                 <a href="../customers/deleteCustomer.php">Delete customer</a>
-                <a href="../customers/searchCustomer.php">#</a>
+                <a href="../customers/searchCustomer.php">Search Customer</a>
             </div>
         </div>
 
