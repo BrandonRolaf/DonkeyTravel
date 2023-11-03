@@ -1,5 +1,5 @@
 <?php
-require "../navbar.php";
+require "../main-navbar.php";
 require "../connect.php";
 ?>
 <html>
@@ -22,7 +22,6 @@ $cellNumber = $customer->get_cellNumber();
 ?>
 <div class="formCreate">
     <form action="updateCustomer3.php" method="post">
-        <?php echo "Name: " . $name; ?>
         <input type="hidden" name="name" value="<?php echo $name; ?>"><br/>
 
         <label for="address">Address:</label>

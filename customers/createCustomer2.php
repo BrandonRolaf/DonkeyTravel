@@ -1,13 +1,13 @@
 <?php
-include "../navbar.php";
+include "../main-navbar.php";
 require "Customer.php";
 
 $name = $_POST["name"];
-$email = $_POST["email"];
 $address = $_POST["address"];
+$email = $_POST["email"];
 $cellNumber = $_POST["cellNumber"];
 
-$customer1 = new Customer ($name, $email, $address, $cellNumber);
+$customer1 = new Customer ($name, $address, $email, $cellNumber);
 $customer1->createCustomer();
 $customer1->printCustomer();
 

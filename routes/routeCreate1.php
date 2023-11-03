@@ -1,4 +1,6 @@
-
+<?php
+include "../main-navbar.php";
+?>
 <!doctype html>
 <html>
 <head>

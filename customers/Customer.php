@@ -6,7 +6,7 @@
         public $email;
         public $cellNumber;
 
-        function __construct($name, $address, $email, $cellNumber)  {
+        function __construct($name = NULL, $address = NULL, $email = NULL, $cellNumber = NULL)  {
             $this->name = $name;
             $this->address = $address;
             $this->email = $email;
@@ -69,7 +69,7 @@
         }
 
         public function printCustomer()  {
-            require "../connect.php";
+
             echo "Name: " . $this->get_name();
             echo "<br/>";
             echo "Address: " . $this->get_address();
@@ -103,7 +103,7 @@
         {
             global $conn;
             try {
-                require "../connect.php";
+
                 $name = $this->get_name();
                 $address = $this->get_address();
                 $email = $this->get_email();
@@ -121,13 +121,13 @@
 
         public function searchCustomer($name)
         {
-            require "../connect.php";
+
             global $conn;
 
             try {
                 $sql = $conn->prepare("
                     SELECT name, address, email, cellNumber FROM customer WHERE name = :name");
-                $sql->bindParam(':name', $name);
+                $sql->bindParam('name', $name);
                 $sql->execute();
 
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);

@@ -1,5 +1,5 @@
 <?php
-require "../navbar.php";
+require "../main-navbar.php";
 ?>
 <html>
 
@@ -16,7 +16,7 @@ require "../navbar.php";
 
     $name = $_POST["name"];
     $customer = new Customer();
-    $customer->searchCustomer($customer);
+    $customer->searchCustomer($name);
     $customer->printCustomer();
     ?>
 

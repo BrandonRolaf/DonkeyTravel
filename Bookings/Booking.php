@@ -114,7 +114,7 @@ require_once "../connect.php";
             try {
                 $sql = $conn->prepare("
                     SELECT startDate, endDate, bookingPin FROM booking WHERE bookingPin = :bookingPin");
-                $sql->bindParam(':bookingPin', $bookingPin);
+                $sql->bindParam('bookingPin', $bookingPin);
                 $sql->execute();
 
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);

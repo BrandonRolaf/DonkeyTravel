@@ -1,3 +1,6 @@
+<?php
+include "../main-navbar.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <body>

@@ -1,5 +1,5 @@
 <?php
-    require "../navbar.php";
+    require "../main-navbar.php";
 
     include "Booking.php";
     $bookingPin = $_POST["bookingPinForm"];

@@ -1,5 +1,5 @@
 <?php
-include "../navbar.php";
+include "../main-navbar.php";
 require "Booking.php";
 
 $startDate = $_POST["startDate"];

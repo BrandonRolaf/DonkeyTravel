@@ -1,6 +1,6 @@
 <?php
 
-require "navbar.php";
+require "../main-navbar.php";
 require "../connect.php";
 ?>
 

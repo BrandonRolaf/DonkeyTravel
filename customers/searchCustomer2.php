@@ -1,25 +1,26 @@
 <?php
 require "../main-navbar.php";
 ?>
-<html>
+    <html>
     <head>
-    <title>Booking Search Results</title>
+        <title>Customer Search Results</title>
+        <link rel="stylesheet" type="text/css" href="../style.css"
     </head>
 
     <body>
     <h1>Results: </h1>
 
     <?php
-    require "Booking.php";
+    require "Customer.php";
     require "../connect.php";
 
-    $bookingPin = $_POST["bookingPinForm"];
-    $booking = new Booking();
+    $name = $_POST["name"];
+    $customer = new Customer();
 
     try {
         echo '<div class="formCreate">';
-        $booking->searchBooking($bookingPin);
-        $booking->printBooking();
+        $customer->searchCustomer($name);
+        $customer->printCustomer();
         echo '<a href="../homepage.php">Back to main menu</a>' .
             '</div>';
     } catch (PDOException $e) {
@@ -28,4 +29,5 @@ require "../main-navbar.php";
     ?>
     </body>
 
-</html>
+    </html>
+<?php

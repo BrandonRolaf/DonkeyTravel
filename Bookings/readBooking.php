@@ -1,6 +1,6 @@
 <?php
 include("../connect.php");
-include("../navbar.php");
+include("../main-navbar.php");
 include("Booking.php");
 ?>
 <!doctype html>
