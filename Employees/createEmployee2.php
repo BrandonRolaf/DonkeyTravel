@@ -4,10 +4,10 @@ include "../main-navbar.php";
 <!doctype html>
 <html>
 	<head>
-		<title>create klanten formulier 2</title>
+		<title>create employee formulier 2</title>
 	</head>
 	<body>
-		<h1>create klanten formulier 2</h1>
+		<h1>create employee formulier 2</h1>
 
 		<?php
 			
