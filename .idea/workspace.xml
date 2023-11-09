@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9b53c81-229a-45bd-88b9-c19adc68553b" name="Changes" comment="Navbar update">
-      <change beforePath="$PROJECT_DIR$/.idea/DonkeyTravel (oud).iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DonkeyTravel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main-navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/main-navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bookings/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/Bookings/Booking.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,12 @@
       <workItem from="1699031753443" duration="559000" />
       <workItem from="1699032334804" duration="85000" />
       <workItem from="1699032429184" duration="1227000" />
-      <workItem from="1699049899983" duration="194000" />
+      <workItem from="1699049899983" duration="860000" />
+      <workItem from="1699191046756" duration="1000" />
+      <workItem from="1699272190867" duration="1367000" />
+      <workItem from="1699275905941" duration="240000" />
+      <workItem from="1699441638535" duration="5381000" />
+      <workItem from="1699469505994" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="Navbar update">
       <option name="closed" value="true" />

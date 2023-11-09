@@ -4,7 +4,7 @@ require "../main-navbar.php";
     <html>
     <head>
         <title>Customer Search Results</title>
-        <link rel="stylesheet" type="text/css" href="../style.css"
+        <link rel="stylesheet" type="text/css" href="../style.css">
     </head>
 
     <body>
@@ -14,12 +14,12 @@ require "../main-navbar.php";
     require "Customer.php";
     require "../connect.php";
 
-    $name = $_POST["name"];
+    $customerId = $_POST["customerId"];
     $customer = new Customer();
 
     try {
         echo '<div class="formCreate">';
-        $customer->searchCustomer($name);
+        $customer->searchCustomer($customerId);
         $customer->printCustomer();
         echo '<a href="../homepage.php">Back to main menu</a>' .
             '</div>';

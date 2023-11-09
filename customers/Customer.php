@@ -99,7 +99,7 @@
             echo '</table></div>';
         }
 
-        public function updateCustomer($name)
+        public function updateCustomer($customerId)
         {
             global $conn;
             try {
@@ -109,8 +109,8 @@
                 $email = $this->get_email();
                 $cellNumber = $this->get_cellNumber();
 
-                $sql = "UPDATE customer SET name = '$name', address = '$address', email = '$email', cellNumber '$cellNumber'
-                    WHERE name = '$name'";
+                $sql = "UPDATE customer SET name = '$name', address = '$address', email = '$email', cellNumber = '$cellNumber'
+                    WHERE customerId = '$customerId'";
                 $conn->exec($sql);
 
                 echo "Customer updated!" . "<br/>" . "<br/>";
@@ -119,15 +119,15 @@
             }
         }
 
-        public function searchCustomer($name)
+        public function searchCustomer($customerId)
         {
 
             global $conn;
 
             try {
                 $sql = $conn->prepare("
-                    SELECT name, address, email, cellNumber FROM customer WHERE name = :name");
-                $sql->bindParam('name', $name);
+                    SELECT name, address, email, cellNumber FROM customer WHERE customerId = :customerId");
+                $sql->bindParam('customerId', $customerId);
                 $sql->execute();
 
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -148,13 +148,13 @@
             }
         }
 
-        public function deleteCustomer($name)
+        public function deleteCustomer($customerId)
         {
             global $conn;
             try {
                 require "../connect.php";
                 $sql = "DELETE FROM customer
-                    WHERE name = '$name'";
+                    WHERE customerId = '$customerId'";
                 $conn->exec($sql);
 
                 echo "Customer Deleted!" . "<br/>" . "<br/>";

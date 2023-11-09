@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 $servername = "localhost";
 $dbname = "donkey_travel";
 $username = "root";
-$password = "root";
+$password = "";
 
 try {
     $conn = new PDO("mysql:host=$servername; 

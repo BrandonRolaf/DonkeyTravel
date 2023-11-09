@@ -12,13 +12,13 @@ require "../main-navbar.php";
     <?php
     require "Customer.php";
 
-    $name = $_POST["name"];
+    $customerId = $_POST["customerId"];
     $delete = $_POST["deleteBox"];
 
     if ($delete=="Yes")  {
         echo "Customer deleted.<br>";
         $customer = new Customer();
-        $customer->deleteCustomer($name);
+        $customer->deleteCustomer($customerId);
     }
 
     else    {

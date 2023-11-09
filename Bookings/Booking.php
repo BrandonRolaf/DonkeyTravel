@@ -42,22 +42,22 @@ require_once "../connect.php";
             return $this->bookingPin;
         }
 
-        public function createBooking() {
-            try {
-                global $conn;
-                $startDate = $this->get_startDate();
-                $endDate = $this->get_endDate();
-                $bookingPin = $this->get_bookingPin();
+                public function createBooking() {
+                    try {
+                        global $conn;
+                        $startDate = $this->get_startDate();
+                        $endDate = $this->get_endDate();
+                        $bookingPin = $this->get_bookingPin();
 
-                $sql = "INSERT INTO booking ( startDate, endDate, bookingPin)
-            VALUES ('$startDate', '$endDate', '$bookingPin')";
+                        $sql = "INSERT INTO booking ( startDate, endDate, bookingPin)
+                    VALUES ('$startDate', '$endDate', '$bookingPin')";
 
-                $conn->exec($sql);
-                echo "<h1>Trip successfully booked!</h1>";
-            } catch (PDOException $e) {
-                echo $sql . "<br>" . $e->getMessage();
-            }
-        }
+                        $conn->exec($sql);
+                        echo "<h1>Trip successfully booked!</h1>";
+                    } catch (PDOException $e) {
+                        echo $sql . "<br>" . $e->getMessage();
+                    }
+                }
 
         public function printBooking()  {
             require "../connect.php";

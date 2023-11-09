@@ -10,8 +10,8 @@ require "../connect.php";
 <div class="formCreate">
     <h1>Delete Customer</h1>
     <form action="deleteCustomer2.php" method="post">
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name">
+        <label for="customerId">Name: </label>
+        <input type="text" id="customerId" name="customerId">
         <input type="submit" value="Delete">
 
 

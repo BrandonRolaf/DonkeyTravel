@@ -11,9 +11,9 @@ require "../connect.php";
 
 <?php
 require "Customer.php";
-$name = $_POST["name"];
+$customerId = $_POST["customerId"];
 $customer = new Customer();
-$customer->searchCustomer($name);
+$customer->searchCustomer($customerId);
 
 $name = $customer->get_name();
 $address = $customer->get_address();
@@ -22,7 +22,11 @@ $cellNumber = $customer->get_cellNumber();
 ?>
 <div class="formCreate">
     <form action="updateCustomer3.php" method="post">
-        <input type="hidden" name="name" value="<?php echo $name; ?>"><br/>
+        <?php echo "Customer ID: " . $customerId; ?>
+            <input type="hidden" name="customerId" value="<?php echo $customerId; ?>"><br/>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<?php echo $name; ?>"><br/>
 
         <label for="address">Address:</label>
         <input type="text" name="address" value="<?php echo $address; ?>"><br/>

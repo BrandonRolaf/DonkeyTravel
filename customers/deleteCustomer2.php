@@ -14,15 +14,15 @@ require "../main-navbar.php";
     require "..\connect.php";
 
 
-    $name = $_POST["name"];
+    $customerId = $_POST["customerId"];
     $customer = new Customer();
-    $customer->searchCustomer($name);
+    $customer->searchCustomer($customerId);
     $customer->printCustomer();
     ?>
 
 
     <form action="deleteCustomer3.php" method="post">
-        <input type="hidden" name="name" value=" <?php echo $name ?>">
+        <input type="hidden" name="customerId" value=" <?php echo $customerId ?>">
         <input type="hidden" name="deleteBox" value="No">
         <input type="hidden" name="deleteBox" value="Yes">
         <label for="deleteBox"> Are you sure?</label><br><br>
